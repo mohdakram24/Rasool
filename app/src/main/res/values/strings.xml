@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Rasool</string>
+    <string name="skip">Skip</string>
+    <string name="welcome">Welcome to</string>
+    <string name="food_hub_desc">Your favourite foods delivered fast at your door.</string>
+    <string name="already_have_account">Already have an account? Login</string>
+    <string name="create_account">Start with email or phone</string>
+    <string name="facebook">FACEBOOK</string>
+    <string name="google">GOOGLE</string>
+    <string name="sign_in">sign in with</string>
+</resources>
