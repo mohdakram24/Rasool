@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.rasool.R
+import com.example.rasool.ui.GroupSocialButtons
 import com.example.rasool.ui.theme.Orange
 
 @Composable
@@ -109,48 +110,10 @@ fun AuthScreen() {
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = stringResource(R.string.sign_in),
-                color = Color.White
+            GroupSocialButtons(
+                onGoogleClick = {},
+                onFacebookClick = {}
             )
-            Row(modifier = Modifier
-                .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceEvenly) {
-                Button(onClick = {},
-                    shape = RoundedCornerShape(32.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color.White)) {
-                    Row(modifier = Modifier.padding(start = 8.dp).height(38.dp),
-                        verticalAlignment = Alignment.CenterVertically) {
-                        Image(
-                            painter = painterResource(R.drawable.ic_facebook),
-                            contentDescription = null,
-                            modifier = Modifier.size(24.dp)
-                        )
-                        Spacer(modifier = Modifier.size(8.dp))
-                        Text(
-                            text = stringResource(R.string.facebook),
-                            color = Color.Black
-                        )
-                    }
-                }
-                Button(onClick = {},
-                    shape = RoundedCornerShape(32.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color.White)) {
-                    Row(modifier = Modifier.height(38.dp),
-                        verticalAlignment = Alignment.CenterVertically) {
-                        Image(
-                            painter = painterResource(R.drawable.ic_google),
-                            contentDescription = null,
-                            modifier = Modifier.size(24.dp)
-                        )
-                        Spacer(modifier = Modifier.size(8.dp))
-                        Text(
-                            text = stringResource(R.string.google),
-                            color = Color.Black
-                        )
-                    }
-                }
-            }
             Spacer(modifier = Modifier.height(16.dp))
             Button(onClick = {},
                 modifier = Modifier.fillMaxWidth(),

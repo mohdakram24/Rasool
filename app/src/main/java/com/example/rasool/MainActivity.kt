@@ -16,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.rasool.data.FoodApi
 import com.example.rasool.ui.features.auth.AuthScreen
+import com.example.rasool.ui.features.auth.signup.SignUpScreen
 import com.example.rasool.ui.theme.RasoolTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -32,7 +33,7 @@ class MainActivity : ComponentActivity() {
             RasoolTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Box(modifier = Modifier.padding(innerPadding))
-                    AuthScreen()
+                    SignUpScreen()
                 }
             }
         }
