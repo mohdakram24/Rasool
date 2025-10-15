@@ -66,4 +66,13 @@ dependencies {
 
     implementation("com.squareup.retrofit2:retrofit:3.0.0")
     implementation("com.squareup.retrofit2:converter-gson:3.0.0")
+
+    implementation("androidx.hilt:hilt-navigation-compose:1.3.0")
+
+    val nav_version = "2.9.4"
+
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+    implementation("androidx.credentials:credentials:1.6.0-alpha05")
+    implementation("androidx.credentials:credentials-play-services-auth:1.6.0-alpha05")
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.0.0")
 }

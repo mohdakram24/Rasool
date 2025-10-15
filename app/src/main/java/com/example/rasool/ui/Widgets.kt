@@ -1,5 +1,6 @@
 package com.example.rasool.ui
 
+import android.accessibilityservice.GestureDescription
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -71,7 +72,38 @@ fun GroupSocialButtons(
                 onClick = {})
             SocialButtons(icon = R.drawable.ic_google,
                 title = R.string.google,
-                onClick = {})
+                onClick = {onGoogleClick()})
+        }
+    }
+}
+
+@Composable
+fun BasicDialog(title: String, description: String, onClick: () -> Unit) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = title,
+            color = Color.Black,
+            fontWeight = FontWeight.Bold
+        )
+        Spacer(modifier = Modifier.size(8.dp))
+        Text(
+            text = description,
+            color = Color.Black,
+            fontWeight = FontWeight.Bold
+        )
+        Spacer(modifier = Modifier.size(8.dp))
+        Button(onClick = onClick,
+            colors = ButtonDefaults.buttonColors(containerColor = Orange),
+            shape = RoundedCornerShape(32.dp)) {
+            Text(
+                text = stringResource(R.string.ok),
+                color = Color.White
+            )
         }
     }
 }
